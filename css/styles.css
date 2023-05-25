@@ -30,6 +30,7 @@ body {
 .header {
     bottom: -1px;
     height: 4px;
+    color: #404bbf;
 }
 .container {
     width: 1158px;
@@ -116,7 +117,6 @@ body {
     height: 4px;
     background-color: #404bbf;
     border-radius: 2px;
-    position: relative;
 }
 .contact-info {
     display: flex;
