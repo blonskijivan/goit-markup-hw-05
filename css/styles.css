@@ -28,21 +28,8 @@ body {
     display: block;
 }
 .header {
-    width: 100%;
-    margin: 0 auto;
-    background-color: var(--primary-white-color);
-    color: var(--active-cl2);
-    border-bottom: 1px solid #E7E9FC;
-    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16), 0 1px 6px rgba(46, 47, 66, 0.08);
-}
-.header {
-    content:none;
-    position: absolute;
-    left: 0;
     bottom: -1px;
     height: 4px;
-    background-color: var(--active-cl2);
-    border-radius: 2px;
 }
 .container {
     width: 1158px;
@@ -66,12 +53,10 @@ body {
 }
 .header-inner {
     margin: auto;
-    position: relative;
     height: 79px;
     position: relative;
     color: #404bbf;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .main-nav {
     display: flex;
@@ -118,8 +103,20 @@ body {
 .menu-link.active,
 .menu-link:hover,
 .menu-link:focus {
-    color: var(--active-cl);
-    
+    position: relative;
+    olor: #404bbf;    
+}
+.menu-link.active::after {
+    content: '';
+    width: 1440px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    position: relative;
 }
 .contact-info {
     display: flex;
