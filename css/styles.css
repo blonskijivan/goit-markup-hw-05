@@ -87,13 +87,13 @@ body {
     color: var(--secondary-cl);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-link.active,
+.menu-item.active .menu-link,
 .menu-link:hover,
 .menu-link:focus {
     position: relative;
     color: #404bbf;    
 }
-.menu-link::after {
+.menu-item.active .menu-link::after {
     content: '';
     width: 100%;
     position: absolute;
@@ -467,6 +467,7 @@ body {
 .footer-icon-container li {
     width: 40px;
     height: 40px;
+
 }
 .footer-icon-container .social-link {
     width: 100%;
@@ -579,6 +580,7 @@ body {
     line-height: 24px;
     letter-spacing: 0.04em;
     color: #4D5AE5;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-filter-button:hover {
     border: 1px solid transparent;
@@ -634,11 +636,12 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0.02em;        
+    letter-spacing: 0.02em;    
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 } 
 .project-link:hover .overlay,
 .project-link:focus .overlay {
-    transform: translateY(0)
+    transform: translateY(0%);
 }
 .projects-item-text {
     padding: 32px 16px;
@@ -650,6 +653,7 @@ body {
     display: block;
     text-decoration: none;
     color: inherit;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-link:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
